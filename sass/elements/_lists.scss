@@ -1,0 +1,37 @@
+ol,
+ul {
+  margin: 			0;
+  padding: 			0;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 	0;
+}
+
+.content-area {
+
+	ol,
+	ul {
+		margin-bottom: 	24px;
+		margin-left: 	30px;
+	}
+
+	ol li {
+		list-style-type: decimal;
+	}
+
+	ul li {
+		list-style-type: square;
+	}
+
+	ul ul,
+	ol ul,
+	ul ol,
+	ol ol {
+	  margin-bottom: 0;
+	}
+
+}

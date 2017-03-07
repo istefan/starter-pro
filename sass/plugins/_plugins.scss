@@ -1,0 +1,233 @@
+/* Yoast SEO
+--------------------------------------------- */
+
+.breadcrumbs {
+	@include 			font-size(13);
+}
+
+/* bbPress
+--------------------------------------------- */
+
+body.bbpress #bbpress-forums {
+	@include 			font-size(15);
+
+	.bbp-breadcrumb {
+		@include 		font-size(13);
+	}
+
+	.subscription-toggle {
+		padding-left: 	5px;
+		text-transform: uppercase;
+		@include 		font-size(12);
+	}
+
+	.bbp-body {
+		@include 		font-size(15);
+	}
+
+	#bbp_search {
+		padding: 		3px 10px;
+	}
+
+	.bbp-topic-started-by,
+	.bbp-topic-freshness-author,
+	.bbp-forum-content {
+		@include 		font-size(13);
+	}
+
+	.bbp-forum-content {
+		color: 			$secondary-color;
+	}
+
+	.quicktags-toolbar input[type="button"] {
+		color: 			#444 !important;
+		text-shadow: 	none;
+	}
+
+	.bbp-template-notice {
+		border-radius: 	0;
+	}
+
+	a.bbp-author-avatar img {
+		padding: 		0;
+		line-height: 	1;
+		margin: 		0;
+	}
+
+}
+
+/* WooCommerce
+--------------------------------------------- */
+
+.woocommerce {
+
+	abbr.required,
+	ins {
+		text-decoration: none;
+	}
+
+	fieldset {
+		margin-bottom: 20px;
+	}
+
+	div.product form.cart .variations {
+		table-layout: fixed;
+	}
+
+	.products .star-rating {
+		padding: 10px;
+	}
+
+	p.stars a,
+	p.stars a:focus,
+	p.stars a:hover {
+		outline: 0;
+	}
+
+	.woocommerce-LoopProduct-link {
+		display: block;
+	}
+
+	a.added_to_cart {
+		line-height: 1;
+	}
+
+	ol.commentlist li {
+		list-style: 			none;
+	}
+
+	.input-text.qty {
+		padding: 				0 5px;
+	}
+
+	div.product .woocommerce-tabs ul.tabs li::after,
+	div.product .woocommerce-tabs ul.tabs li::before {
+		display: none;
+	}
+
+	div.product .woocommerce-tabs ul.tabs li {
+		border-radius: 0;
+	}
+
+	#reviews #comment {
+		height: 150px;
+	}
+
+	a.button,
+	a.button.alt,
+	button.button,
+	button.button.alt,
+	input.button,
+	input.button.alt,
+	input.button[type="submit"],
+	#respond input#submit,
+	#respond input#submit.alt {
+		background-color: 		$primary-color;
+		font-weight: 			normal;
+		border-radius: 			0;
+		color: 					#fff;
+		text-shadow: 			0 1px 1px rgba(0,0,0,0.6);
+
+		&:hover {
+			color: 				#fff;
+			background-color: 	$primary-color;
+			box-shadow: 		inset 0 2px 3px rgba(0,0,0,0.4);
+		}
+	}
+
+	 a.button:disabled,
+	 a.button:disabled[disabled],
+	 button.button:disabled,
+	 button.button:disabled[disabled],
+	 input.button.disabled,
+	 input.button:disabled[disabled],
+	 #respond input#submit.disabled,
+	 #respond input#submit:disabled[disabled],
+	 a.button.alt:disabled,
+	 a.button.alt[disabled]:disabled,
+	 button.button.alt:disabled,
+	 button.button.alt[disabled]:disabled,
+	 input.button.alt:disabled,
+	 input.button.alt[disabled]:disabled,
+	 #respond input#submit.alt:disabled,
+	 #respond input#submit.alt[disabled]:disabled {
+		background-color: 		#ddd;
+		color: 					#565656;
+		text-shadow: 			none;
+
+		&:hover {
+			background-color: 	#ddd;
+			box-shadow: 		none;
+		}
+	}
+
+}
+
+.woocommerce-cart #payment ul.payment_methods li,
+.woocommerce-checkout #payment ul.payment_methods li,
+#add_payment_method #payment ul.payment_methods li {
+	list-style-type: none;
+}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+	line-height: 	25px;
+	min-width: 		200px;
+}
+
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment,
+#add_payment_method #payment {
+	border-radius: 0;
+}
+
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before,
+#add_payment_method #payment div.payment_box::before {
+	display: none;
+}
+
+.woocommerce-product-search input[type="submit"] {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Genesis eNews Extended
+--------------------------------------------- */
+
+.enews-widget {
+	padding: 			24px;
+}
+
+.enews-widget,
+.enews-widget .widget-title {
+	color: 				#fff;
+}
+
+.sidebar .widget.enews-widget {
+	background-color: 	#333;
+}
+
+.enews-widget input,
+.enews-widget input:focus {
+	border: 1px solid 	#333;
+}
+
+.enews-widget input {
+	@include 			font-size(16);
+	margin-bottom: 		16px;
+}
+
+.enews-widget input[type="submit"] {
+	margin: 			0;
+	width: 				100%;
+}
+
+.enews form + p {
+	margin-top: 		24px;
+}
+

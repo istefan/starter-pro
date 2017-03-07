@@ -1,0 +1,36 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 		"Lato", Helvetica, Arial, sans-serif;
+	color: 				$heading-font-color;
+	font-weight: 		300;
+	line-height: 		1.2;
+	margin: 			0 0 24px;
+}
+
+h1 {
+	@include 			font-size(32);
+}
+
+h2 {
+	@include 			font-size(28);
+}
+
+h3 {
+	@include 			font-size(24);
+}
+
+h4 {
+	@include 			font-size(22);
+}
+
+h5 {
+	@include 			font-size(19);
+}
+
+h6 {
+	@include 			font-size(15);
+}

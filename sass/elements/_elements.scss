@@ -1,0 +1,298 @@
+*,
+input[type="search"],
+*:before,
+*:after {
+    -webkit-box-sizing:     border-box;
+    -moz-box-sizing:        border-box;
+    box-sizing:             border-box;
+}
+
+html {
+    font-size:                      62.5%;
+    -webkit-tap-highlight-color:    rgba(0, 0, 0, 0);
+    -webkit-box-sizing:             border-box;
+    -moz-box-sizing:                border-box; 
+    box-sizing:                     border-box;
+}
+
+a:focus {
+    outline: none;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+    @include            transition(all 0.2s ease-in-out);
+}
+
+input,
+button,
+select,
+textarea {
+    font-family:        inherit;
+    font-size:          inherit;
+    line-height:        inherit;
+}
+
+figure {
+    margin:             0;
+}
+
+img {
+    vertical-align:     middle;
+}
+
+hr {
+    margin-top:         24px;
+    margin-bottom:      24px;
+    border:             0;
+    border-top:         1px solid $gray-light;
+}
+
+[role="button"] {
+    cursor:             pointer;
+}
+
+::-moz-selection {
+    background-color:   $gray-dark;
+    color:              #fff;
+}
+
+::selection {
+    background-color:   $gray-dark;
+    color:              #fff;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+    width:              auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+    display:            none;
+}
+
+@-ms-viewport {
+    width:              device-width;
+}
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+    max-width:          100%;
+}
+
+img {
+    height: auto;
+}
+
+.featured-content img,
+.gallery img {
+    width:              auto; /* IE8 */
+}
+
+textarea {
+    max-width:          100%;
+}
+
+.centered {
+    text-align:         center;
+}
+
+.centered img {
+    margin-left:        auto;
+    margin-right:       auto;
+}
+
+.required {
+    color:              red;
+}
+
+/* Body Fade In Effect
+--------------------------------------------- */
+
+body {
+    -webkit-animation: fadein 0.5s;
+       -moz-animation: fadein 0.5s;
+        -ms-animation: fadein 0.5s;
+         -o-animation: fadein 0.5s;
+            animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Content Boxes
+--------------------------------------------- */
+ 
+.content-box {
+    margin-bottom:          30px;
+    overflow:               hidden;
+    padding:                30px;
+
+    & p:last-child,
+    & ul:last-child,
+    & ol:last-child {
+        margin-bottom:      0;
+    }
+
+}
+ 
+.cb-blue {
+    background-color:       #d8ecf7;
+    border:                 1px solid #afcde3;
+}
+ 
+.cb-gray {
+    background-color:       #e2e2e2;
+    border:                 1px solid #bdbdbd;
+}
+ 
+.cb-green {
+    background-color:       #d9edc2;
+    border:                 1px solid #b2ce96;
+}
+ 
+.cb-purple {
+    background-color:       #e2e2f9;
+    border:                 1px solid #bebde9;
+}
+ 
+.cb-red {
+    background-color:       #f9dbdb;
+    border:                 1px solid #e9b3b3;
+}
+ 
+.cb-gold {
+    background-color:       #fef5c4;
+    border:                 1px solid #fadf98;
+}
+
+.inline-icon.genericon {
+    font-size:              inherit;
+    line-height:            inherit;
+}
+
+/* Divider
+--------------------------------------------- */
+
+.divider {
+    border-bottom:          1px solid #ddd;
+    clear:                  both;
+    width:                  70%;
+    margin:                 auto;
+    margin-bottom:          50px;
+    padding-top:            30px;
+    position:               relative;
+
+    .divider-inside {
+        width:              8px;
+        height:             8px;
+        position:           absolute;
+        left:               50%;
+        border:             2px solid #ddd;
+        background-color:   #fff;
+        margin-left:        -4px;
+        margin-top:         -4px;
+        border-radius:      4px;
+    }
+}
+
+/* Fadeup Effect
+--------------------------------------------- */
+
+.fade-up {
+    opacity:                            0;
+    overflow:                           hidden;
+    -webkit-animation-duration:         1s;
+    animation-duration:                 1s;
+    -webkit-animation-fill-mode:        both;
+    animation-fill-mode:                both;
+    -webkit-animation-timing-function:  ease-in-out;
+    animation-timing-function:          ease-in-out;
+}
+
+@-webkit-keyframes fadeInUp {
+    from { opacity:         0; -webkit-transform: translateY(20px); }
+    to { opacity:           1; -webkit-transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity:         0; transform: translateY(20px); }
+    to { opacity:           1; transform: translateY(0); }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name:         fadeInUp;
+}
+
+/*--------------------------------------------------------------
+## Accessibility
+--------------------------------------------------------------*/
+
+@import "accessibility";
+
+/*--------------------------------------------------------------
+## Alignments
+--------------------------------------------------------------*/
+
+@import "alignments";
+
+/*--------------------------------------------------------------
+## Clearings
+--------------------------------------------------------------*/
+
+@import "clearings";
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+
+@import "lists";
+
+/*--------------------------------------------------------------
+## Tables
+--------------------------------------------------------------*/
+
+@import "tables";
+
+/*--------------------------------------------------------------
+## Grid
+--------------------------------------------------------------*/
+
+@import "grid";

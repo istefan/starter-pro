@@ -1,0 +1,524 @@
+# Copyright (C) 2015 Nathan Rice
+# This file is distributed under the same license as the Simple URLs package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WPshed\n"
+"Report-Msgid-Bugs-To: StudioPress <translations@studiopress.com>\n"
+"POT-Creation-Date: 2017-03-07 23:35+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: StudioPress <translations@studiopress.com>\n"
+"Language-Team: English <wpshed@gmail.com>\n"
+"X-Generator: Poedit 1.8.12\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;"
+"_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;"
+"esc_attr_x:1,2c;esc_html_x:1,2c\n"
+"X-Textdomain-Support: yes\n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
+msgstr ""
+
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:51
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive-portfolio.php:87 archive.php:34 index.php:39 search.php:31
+msgid "Previous page"
+msgstr ""
+
+#: archive-portfolio.php:88 archive.php:35 index.php:40 search.php:32
+msgid "Next page"
+msgstr ""
+
+#: archive-portfolio.php:89 archive.php:36 index.php:41 search.php:33
+msgid "Page"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40 comments.php:62
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43 comments.php:65
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44 comments.php:66
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:79
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:41
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:42
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:43
+msgid "Mobile Menu"
+msgstr ""
+
+#: functions.php:95
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:97
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:105
+msgid "Content Bottom"
+msgstr ""
+
+#: functions.php:107
+msgid "Appears at the bottom of the content on posts."
+msgstr ""
+
+#: functions.php:115
+msgid "Sidebar Footer 1"
+msgstr ""
+
+#: functions.php:117 functions.php:127 functions.php:137 functions.php:147
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:125
+msgid "Sidebar Footer 2"
+msgstr ""
+
+#: functions.php:135
+msgid "Sidebar Footer 3"
+msgstr ""
+
+#: functions.php:145
+msgid "Sidebar Footer 4"
+msgstr ""
+
+#: functions.php:196
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:42
+msgid "MENU"
+msgstr ""
+
+#: inc/customizer-class.php:32
+msgid "Untitled Panel"
+msgstr ""
+
+#: inc/customizer-class.php:50 inc/customizer-class.php:72
+msgid "Untitled Section"
+msgstr ""
+
+#: inc/customizer-class.php:372 inc/customizer-class.php:421
+#: inc/customizer-class.php:466 inc/customizer-class.php:510
+#: inc/customizer-class.php:555 inc/customizer-class.php:598
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: inc/customizer-examples.php:13
+msgid "Text Field"
+msgstr ""
+
+#: inc/customizer-examples.php:23
+msgid "Textarea Field"
+msgstr ""
+
+#: inc/customizer-examples.php:33
+msgid "Color Picker Field"
+msgstr ""
+
+#: inc/customizer-examples.php:43
+msgid "Radio Field"
+msgstr ""
+
+#: inc/customizer-examples.php:51 inc/customizer-examples.php:76
+msgid "Choice 1"
+msgstr ""
+
+#: inc/customizer-examples.php:52 inc/customizer-examples.php:77
+msgid "Choice 2"
+msgstr ""
+
+#: inc/customizer-examples.php:53 inc/customizer-examples.php:78
+msgid "Choice 3"
+msgstr ""
+
+#: inc/customizer-examples.php:58
+msgid "Checkbox Field"
+msgstr ""
+
+#: inc/customizer-examples.php:68
+msgid "Select Field"
+msgstr ""
+
+#: inc/customizer-examples.php:83
+msgid "Image Upload Field"
+msgstr ""
+
+#: inc/customizer-examples.php:93
+msgid "File Upload Field"
+msgstr ""
+
+#: inc/customizer-examples.php:104
+msgid "URL Field"
+msgstr ""
+
+#: inc/customizer-examples.php:114
+msgid "Email Field"
+msgstr ""
+
+#: inc/customizer-examples.php:124
+msgid "Password Field"
+msgstr ""
+
+#: inc/customizer-examples.php:134
+msgid "number Field (px)"
+msgstr ""
+
+#: inc/customizer-examples.php:150
+msgid "Pages Field"
+msgstr ""
+
+#: inc/customizer-examples.php:160
+msgid "Categories Field"
+msgstr ""
+
+#: inc/customizer-examples.php:170
+msgid "Tags Field"
+msgstr ""
+
+#: inc/customizer-examples.php:180
+msgid "Post Types Field"
+msgstr ""
+
+#: inc/customizer-examples.php:190
+msgid "Posts Field"
+msgstr ""
+
+#: inc/customizer-examples.php:200
+msgid "Users Field"
+msgstr ""
+
+#: inc/customizer-examples.php:210
+msgid "Menus Field"
+msgstr ""
+
+#: inc/extras.php:56
+#, php-format
+msgid "Continue reading %s &raquo;"
+msgstr ""
+
+#: inc/extras.php:152
+msgid "Copyright"
+msgstr ""
+
+#: inc/extras.php:169
+msgid "Theme by"
+msgstr ""
+
+#: inc/extras.php:171
+msgid "Powered by"
+msgstr ""
+
+#: inc/extras.php:218
+msgctxt "post type general name"
+msgid "Projects"
+msgstr ""
+
+#: inc/extras.php:219
+msgctxt "post type singular name"
+msgid "Project"
+msgstr ""
+
+#: inc/extras.php:220
+msgctxt "admin menu"
+msgid "Portfolio"
+msgstr ""
+
+#: inc/extras.php:221
+msgctxt "add new on admin bar"
+msgid "Project"
+msgstr ""
+
+#: inc/extras.php:222
+msgctxt "portfolio"
+msgid "Add New"
+msgstr ""
+
+#: inc/extras.php:223
+msgid "Add New Project"
+msgstr ""
+
+#: inc/extras.php:224
+msgid "Edit Project"
+msgstr ""
+
+#: inc/extras.php:225
+msgid "New Project"
+msgstr ""
+
+#: inc/extras.php:226
+msgid "View Projects"
+msgstr ""
+
+#: inc/extras.php:227
+msgid "All Projects"
+msgstr ""
+
+#: inc/extras.php:228
+msgid "Search Projects"
+msgstr ""
+
+#: inc/extras.php:229
+msgid "No Projects found"
+msgstr ""
+
+#: inc/extras.php:230
+msgid "No Projects found in Trash"
+msgstr ""
+
+#: inc/template-tags.php:53
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:58
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:67 template-parts/content-front-page.php:34
+#: template-parts/content-page.php:34
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/template-tags.php:86
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:88
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:92
+msgid " "
+msgstr ""
+
+#: inc/theme-options.php:21
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-options.php:34
+msgid "Front Page"
+msgstr ""
+
+#: inc/theme-options.php:35
+msgid "Each section will be populated with the content of the selected page."
+msgstr ""
+
+#: inc/theme-options.php:45
+msgid "Front Page Section"
+msgstr ""
+
+#: inc/theme-options.php:61
+msgid "Site Footer"
+msgstr ""
+
+#: inc/theme-options.php:70
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/theme-options.php:71
+msgid "The number of widgets in the footer."
+msgstr ""
+
+#: inc/theme-options.php:78
+msgid "No footer widgets"
+msgstr ""
+
+#: inc/theme-options.php:79
+msgid "1 Footer Widget"
+msgstr ""
+
+#: inc/theme-options.php:80
+msgid "2 Footer Widgets"
+msgstr ""
+
+#: inc/theme-options.php:81
+msgid "3 Footer Widgets"
+msgstr ""
+
+#: inc/theme-options.php:82
+msgid "4 Footer Widgets"
+msgstr ""
+
+#: inc/theme-options.php:87
+msgid "Footer Credits"
+msgstr ""
+
+#: inc/theme-options.php:88
+msgid "This will replace the default footer credits"
+msgstr ""
+
+#: inc/theme-options.php:101
+msgid "Portfolio"
+msgstr ""
+
+#: inc/theme-options.php:110
+msgid "Portfolio Page Title"
+msgstr ""
+
+#: inc/theme-options.php:120
+msgid "Portfolio Page Description"
+msgstr ""
+
+#: inc/theme-options.php:130
+msgid "Portfolio Post Columns"
+msgstr ""
+
+#: inc/theme-options.php:138
+msgid "1 Column"
+msgstr ""
+
+#: inc/theme-options.php:139
+msgid "2 Columns"
+msgstr ""
+
+#: inc/theme-options.php:140
+msgid "3 Columns"
+msgstr ""
+
+#: inc/theme-options.php:141
+msgid "4 Columns"
+msgstr ""
+
+#: inc/theme-options.php:146
+msgid "Portfolio Posts / Page"
+msgstr ""
+
+#: inc/theme-options.php:161
+msgid "Display title on Portfolio archive page."
+msgstr ""
+
+#: inc/theme-options.php:171
+msgid "Display excerpt on Portfolio archive page."
+msgstr ""
+
+#: inc/theme-options.php:181
+msgid "Portfolio Slug"
+msgstr ""
+
+#: inc/theme-options.php:182
+msgid ""
+"This is helpful for search engines. Example: use books if you showcase "
+"your books. Note: If you change the slug, you need to go to Settings > "
+"Permalinks and save the changes again."
+msgstr ""
+
+#: inc/theme-options.php:195
+msgid "Custom Scripts"
+msgstr ""
+
+#: inc/theme-options.php:204
+msgid "Header Scripts"
+msgstr ""
+
+#: inc/theme-options.php:205
+msgid ""
+"This code will output immediately before the closing </head> tag in the "
+"document source."
+msgstr ""
+
+#: inc/theme-options.php:214
+msgid "Footer Scripts"
+msgstr ""
+
+#: inc/theme-options.php:215
+msgid ""
+"This code will output immediately before the closing </body> tag in the "
+"document source."
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/biography.php:19
+msgid "Author:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:22 template-parts/content-portfolio.php:23
+#: template-parts/content-single.php:34
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-single.php:29
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""

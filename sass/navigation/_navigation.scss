@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "menus";
+
+@import "mobile";
+
+/* Header Navigation
+--------------------------------------------- */
+
+.site-header {
+
+	.main-navigation {
+		float: right;
+	}
+
+}
+
+/* Footer Navigation
+--------------------------------------------- */
+
+.site-footer {
+
+	.nav-menu {
+
+		a {
+			color: 			$gray-light;
+		}
+
+		& > li:hover a,
+		& a:hover,
+		& .current-menu-item > a {
+			color: 			$gray-light;
+		}
+	}
+
+}

@@ -1,0 +1,50 @@
+input,
+select,
+textarea {
+	background-color: 		#ffffff;
+	border: 				1px solid $gray-lighter;
+	color: 					$body-font-color;
+	@include 				font-size(15);
+	padding: 				7px 10px;
+	width: 					100%;
+	border-radius: 			3px;
+}
+
+input:focus,
+textarea:focus {
+	border-color: 			$gray-light;
+	outline: 				none;
+}
+
+.search-form {
+	overflow: 				hidden;
+	width: 					100%;
+}
+
+.search-form input[type="submit"],
+.search-submit {
+	border: 				0;
+	clip: 					rect(0, 0, 0, 0);
+	height: 				1px;
+	margin: 				-1px;
+	padding: 				0;
+	position: 				absolute;
+	width: 					1px;
+}
+
+.hentry {
+	input,
+	select,
+	textarea {
+		margin-bottom: 		24px;
+	}
+}
+
+::-moz-placeholder {
+  color: 					$gray-light;
+  opacity: 					1;
+}
+
+::-webkit-input-placeholder {
+  color: 					$gray-light;
+}

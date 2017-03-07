@@ -1,0 +1,143 @@
+.comments-area {
+	@include 				font-size(16);
+	padding-top: 			20px;
+	margin-top: 			30px;
+
+	& ol.comment-list {
+		margin-left: 		0;
+
+			li.comment,
+			li.pingback {
+				list-style-type: none;
+			}
+	}
+
+	.comments-title {
+		@include 			font-size(20);
+		color: 				$secondary-color;
+	}
+
+	.comment-content {
+		clear: 				both;
+		@include 			font-size(15);
+	}
+
+	.comment-author {
+		@include 			font-size(12);
+		margin-bottom: 		0;
+		line-height: 		1;
+		text-transform: 	uppercase;
+		color: 				$heading-font-color;
+
+		.avatar {
+			float: 			left;
+			margin: 		0 15px 15px 0;
+		}
+
+		a {
+			text-transform: uppercase;
+			color: 			$heading-font-color;
+		}
+	}
+
+	.comment-metadata {
+		@include 			font-size(8);
+		text-transform: 	uppercase;
+		
+		a {
+			font-weight: normal;
+			color: 			$secondary-color;
+		}	
+	}
+
+	a.comment-reply-link {
+		line-height: 		1;
+		padding: 			5px 10px;
+		border-radius: 		3px;
+		@include 			font-size(12);
+		text-transform: 	uppercase;
+		font-weight: 		bold;
+		border: 			1px solid $gray-lighter;
+		color: 				$secondary-color;
+
+		&:hover {
+			color: 			$link-color;
+		}
+	}
+
+
+	.comment-reply-title {
+		padding-top: 		30px;
+		@include 			font-size(20);
+		color: 				$secondary-color;
+	}
+
+	.comment-list li.comment,
+	.ping-list li.comment {
+		list-style-type: 	none;
+		margin-top: 		24px;
+		padding: 			15px;
+	}
+
+	.comment-list li.pingback {
+		padding: 			6px 0;
+		margin: 			0;
+	}
+
+	.comment-list li.comment li {
+		margin-right: 		-15px;
+	}
+
+	.comment {
+		border: 			1px solid $gray-lighter; 
+		border-right: 		none; 
+	}
+
+	.comment.depth-1 {
+		border-right: 		1px solid $gray-lighter; 
+	}
+
+	.bypostauthor {
+		border-color: 		$gray-lighter;
+		background-color: 	$tertiary-color;
+	}
+
+}
+
+@media (min-width: $medium-screen) {
+	.comments-area {
+		.comment-author{
+			@include 		font-size(16);
+		}
+		.comment-metadata {
+			@include 		font-size(13);
+		} 
+	} 
+}
+
+.ping-list,
+.entry-comments,
+.comment-respond {
+	margin-bottom: 			40px;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 					50%
+}
+
+.comment-respond label {
+	display: 				block;
+	margin-right: 			12px;
+}
+
+p.no-comments {
+	margin-top: 			20px;
+	font-style: 			italic;
+	color: 					#aaa;
+}
+
+p.subscribe-to-comments {
+	padding: 				24px 0 16px;
+}

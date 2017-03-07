@@ -1,0 +1,57 @@
+.widget {
+	word-wrap: 				break-word;
+
+	select {
+		max-width: 			100%;
+	}
+
+	li {
+		list-style-type: none;
+		margin-bottom: 		4px;
+		padding-bottom: 	4px;
+		border-bottom: 		1px solid $gray-lightest;
+	}
+
+	ul ul {
+		margin-top: 		4px;
+		padding-top: 		4px;
+	}
+
+	ul > li:last-child {
+		border: 			none;
+		margin-bottom: 		0;
+		padding-bottom: 	0;
+	}
+
+	.post-date {
+		font-size: 			90%;
+		color: 				$gray-light;
+		font-style: 		italic;
+	}
+
+}
+
+/* Calendar
+--------------------------------------------- */
+
+.widget_calendar table {
+
+	table {
+		width: 				100%;
+	}
+	td, th {
+		text-align: 		center;
+	}
+
+}
+
+/* Search
+--------------------------------------------- */
+
+.widget_search {
+
+	.search-submit {
+		display: 			none;
+	}
+
+}

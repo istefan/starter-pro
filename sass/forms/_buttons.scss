@@ -1,0 +1,95 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: 		$primary-color;
+	box-shadow: 			none;
+	color: 					#fff;
+	cursor: 				pointer;
+	padding: 				5px 25px;
+	@include 				font-size(15);
+	border: 				none;
+	width: 					auto;
+	font-weight: 			normal;
+	text-transform: 		uppercase;
+	text-shadow: 			0 1px 1px rgba(0,0,0,0.6);
+	border-radius: 			3px;
+
+	&:hover {
+		color: 				#fff;
+		box-shadow: 		inset 0 2px 3px rgba(0,0,0,0.4);
+	}
+}
+
+.button,
+a.button {
+	display: 				inline-block;
+	text-decoration: 		none;
+	width: 					auto;
+	color: 					#fff;
+
+	&:hover {
+		color: 				#fff;
+	}
+}
+
+.button {
+	&.small {
+		padding: 			0 15px;
+		@include 			font-size(12);
+	}
+	&.large {
+		padding: 			8px 30px;
+	}
+	&.extra-large {
+		padding: 			15px 40px;
+		@include 			font-size(17);
+	}
+	&.red {
+		background-color: 	$red;
+	}
+	&.blue {
+		background-color: 	$blue;
+	}
+	&.green {
+		background-color: 	$green;
+	}
+	&.gold {
+		background-color: 	$gold;
+	}
+	&.gray {
+		background-color: 	$gray;
+	}
+	&.black {
+		background-color: 	#000000;
+	}
+	&.outline {
+		background-color: 	transparent;
+		box-shadow: 		none;
+		color: 				$primary-color !important;
+		border: 			2px solid $primary-color;
+		text-shadow: 		none;
+	}
+	&.outline.red {
+		color: 				$red !important;
+		border-color: 		$red;
+	}
+	&.outline.blue {
+		color: 				$blue !important;
+		border-color: 		$blue;
+	}
+	&.outline.green {
+		color: 				$green !important;
+		border-color: 		$green;
+	}
+	&.outline.black {
+		color: 				#000000 !important;
+		border-color: 		#000000;
+	}
+	&.outline.white {
+		color: 				#ffffff !important;
+		border-color: 		#ffffff;
+	}
+
+}

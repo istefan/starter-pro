@@ -1,0 +1,72 @@
+.site-container {
+	margin: 			20px auto;
+	max-width: 			$site-width-mobile;
+	overflow: 			hidden;
+	background-color: 	#fff;
+	box-shadow: 		0 1px 3px rgba(0,0,0,0.2);
+	border-radius: 		4px;
+}
+
+.site-content {
+	padding: 			30px 0;
+}
+
+body.page-template-page-front .site-content {
+	max-width: 			100%;
+}
+
+.content-area,
+.sidebar {
+	margin-left: 		auto;
+	margin-right: 		auto;
+	width: 				95%;
+}
+
+@media (min-width: $small-screen) {
+	.site-container {
+		max-width: 		$site-width-small;
+	}
+}
+
+@media (min-width: $medium-screen) {
+
+	.site-container {
+		max-width: 		$site-width-medium;
+	}
+	.site-content {
+		padding: 		60px 0;
+	}
+	.content-area {
+		width: 			$grid-width-medium - $sidebar-width - $sidebar-margin;
+		float: 			left;
+	}
+	.sidebar {
+		width: 			$sidebar-width;
+		float: 			right;
+	}
+
+	body.page-template-page-no-sidebar .content-area,
+	body.no-sidebar .content-area,
+	body.single-portfolio .content-area,
+	body.woocommerce .content-area {
+		float: 			none;
+		margin-left: 	auto;
+		margin-right: 	auto;
+	}
+
+	body.post-type-archive-portfolio .content-area,
+	body.page-template-page-full .content-area,
+	body.page-template-page-front .content-area {
+		width: 			100%;
+	}
+
+}
+
+@media (min-width: $large-screen) {
+	.site-container {
+		max-width: 		$site-width-large;
+	}
+	.content-area {
+		width: 			$grid-width-large - $sidebar-width - $sidebar-margin;
+	}
+}

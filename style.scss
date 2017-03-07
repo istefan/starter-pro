@@ -1,0 +1,101 @@
+/*!
+Theme Name: Starter Pro
+Theme URI: https://wpshed.com/themes/starter/
+Author: WPshed
+Author URI: https://wpshed.com/
+Description: Starter Pro is a theme created for WordPress. For setup instructions please go to <a href="https://wpshed.com/account/">https://wpshed.com/account/</a>
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: starter
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Starter Pro is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
+*/
+
+@import "sass/base/base";
+@import "sass/base/mixins";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "sass/normalize/normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+@import "sass/typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+@import "sass/elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+@import "sass/forms/forms";
+
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+
+@import "sass/structure/structure";
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+@import "sass/header/header";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+@import "sass/navigation/navigation";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+@import "sass/content/content";
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+@import "sass/sidebar/sidebar";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+@import "sass/footer/footer";
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+
+@import "sass/comments/comments";
+
+/*--------------------------------------------------------------
+# WordPress
+--------------------------------------------------------------*/
+
+@import "sass/wordpress/wordpress";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+@import "sass/plugins/plugins";
