@@ -167,7 +167,7 @@ function starter_default_footer_credits() {
 
 	$footer_credits = sprintf( '%1$s <a href="%2$s" target="_blank" rel="designer">WPshed</a> &middot; %3$s <a href="%4$s" target="_blank">WordPress</a> ',
 		esc_html__( 'Theme by', 'starter' ),
-		esc_url( 'https://starter.com' ),
+		esc_url( 'https://wpshed.com' ),
 		esc_html__( 'Powered by', 'starter' ),
 		esc_url( 'https://wordpress.org' )
 	);
