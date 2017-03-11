@@ -26,9 +26,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_post_meta( get_the_ID(), 'hide_footer', true ) != 1 ) : ?>
 	<footer class="entry-footer">
 		<?php starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-	<?php endif; ?>
+
 </article><!-- #post-## -->

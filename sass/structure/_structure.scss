@@ -11,7 +11,7 @@
 	padding: 			30px 0;
 }
 
-body.page-template-page-front .site-content {
+body.page-template-template-front-page .site-content {
 	max-width: 			100%;
 }
 
@@ -45,8 +45,8 @@ body.page-template-page-front .site-content {
 		float: 			right;
 	}
 
-	body.page-template-page-no-sidebar .content-area,
-	body.no-sidebar .content-area,
+	body.page-template-template-no-sidebar .content-area,
+	body.post-template-template-no-sidebar .content-area,
 	body.single-portfolio .content-area,
 	body.woocommerce .content-area {
 		float: 			none;
@@ -55,8 +55,9 @@ body.page-template-page-front .site-content {
 	}
 
 	body.post-type-archive-portfolio .content-area,
-	body.page-template-page-full .content-area,
-	body.page-template-page-front .content-area {
+	body.page-template-template-full-width .content-area,
+	body.post-template-template-full-width .content-area,
+	body.page-template-template-front-page .content-area {
 		width: 			100%;
 	}
 

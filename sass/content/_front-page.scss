@@ -1,4 +1,4 @@
-body.page-template-page-front {
+body.page-template-template-front-page {
 
 	.hentry {
 		border-bottom: 				none;
@@ -23,7 +23,7 @@ body.page-template-page-front {
 	}
 
 	.front-page-section-1 {
-		background-color: 			$primary-color;
+		background-color: 			$gray;
 		padding-top: 				80px;
 		padding-bottom: 			60px;
 		color:						#fff;
@@ -45,7 +45,7 @@ body.page-template-page-front {
 
 
 @media (min-width: $medium-screen) {
-	body.page-template-page-front {
+	body.page-template-template-front-page {
 
 		.front-page-section {
 			padding-top: 				100px;
