@@ -8,10 +8,8 @@
 // User access level
 $capability = 'edit_theme_options';
 
-/**
- * Here we will set the options we are going to have in the customizer.
- */
-$options = array(); // If you delete this line, the sky will fall down! So you better don't.
+// Option type
+$type = 'theme_mod'; // option / theme_mod
 
 /* ---------------------------------------------------------------------------------------------------
     Panels

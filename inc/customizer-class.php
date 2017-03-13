@@ -1,25 +1,68 @@
 <?php
 /**
  * Customizer Framework.
+ * Version: 1.2
  *
  * @link https://wpshed.com/wordpress/wordpress-theme-customizer-framework/
  *
- * @package Starter
+ * @package WPshed Customizer Framework
  */
 
 
 /**
- * Define starter settings file
+ * Define constants
  */
-function starter_customizer_register( $wp_customize ) {
+define( 'STARTER_CF_DIR', trailingslashit( get_template_directory() ) . basename( dirname( __FILE__ ) ) );
+define( 'STARTER_CF_THEME_OPTIONS', trailingslashit( STARTER_CF_DIR ) . 'theme-options.php' );
+define( 'STARTER_CF_THEME_SAMPLE_OPTIONS', trailingslashit( STARTER_CF_DIR ) . 'customizer-examples.php' );
+
+
+/**
+ * Locate settings file
+ */
+function starter_cf_options_file() {
+    if ( file_exists( STARTER_CF_THEME_OPTIONS ) ) {
+        $customizer_options = STARTER_CF_THEME_OPTIONS;
+    } else {
+        $customizer_options = STARTER_CF_THEME_SAMPLE_OPTIONS;
+    }
+    return $customizer_options;
+}
+
+
+/**
+ * Register Settings
+ */
+function starter_cf_register_settings() {
+    $options = array();
+    require_once starter_cf_options_file();
+
+    foreach ( $options as $option ) {
+        if ( $option['type'] != 'panel' && $option['type'] != 'section' ) {
+            if ( ! get_option( $option['id'] ) ) {
+                update_option( $option['id'], $option['default'] );
+            }
+        }
+    }
+}
+add_action( 'after_switch_theme', 'starter_cf_register_settings' );
+
+
+/**
+ * Register Customizer
+ */
+function starter_cf_customizer_register( $wp_customize ) {
 
     // User access level
     $capability = 'edit_theme_options';
 
-    // Output Customizer Options
-    require_once trailingslashit( get_template_directory() ) . 'inc/theme-options.php';
-
+    // Option type
     $type = 'theme_mod'; // option / theme_mod
+
+    $options = array();
+
+    // Require customizer options file
+    require_once starter_cf_options_file();
 
     $i = 0;
     foreach ( $options as $option ) {
@@ -73,6 +116,13 @@ function starter_customizer_register( $wp_customize ) {
             $description    = ( isset( $option['description'] ) ) ? esc_attr( $option['description'] ) : '';
             $form_field     = ( isset( $option['option'] ) ) ? esc_attr( $option['option'] ) : 'option';
             $sanitize_callback = ( isset( $option['sanitize_callback'] ) ) ? esc_attr( $option['sanitize_callback'] ) : '';
+            $width          = ( isset( $option['width'] ) ) ? $option['width'] : '';
+            $height         = ( isset( $option['height'] ) ) ? $option['height'] : '';
+            $flex_width     = ( isset( $option['flex_width'] ) ) ? $option['flex_width'] : '';
+            $flex_height    = ( isset( $option['flex_height'] ) ) ? $option['flex_height'] : '';
+            $placeholder    = ( isset( $option['placeholder'] ) ) ? $option['placeholder'] : __( 'No file selected', 'starter' );
+            $frame_title    = ( isset( $option['frame_title'] ) ) ? $option['frame_title'] : __( 'Select File', 'starter' );
+            $frame_button   = ( isset( $option['frame_button'] ) ) ? $option['frame_button'] : __( 'Choose File', 'starter' );
 
             // Add control settings
             $wp_customize->add_setting( esc_attr( $option['id'] ), array(
@@ -197,6 +247,87 @@ function starter_customizer_register( $wp_customize ) {
                     ) );
                 break;
 
+                // Pages Field
+                case 'pages':
+                    $wp_customize->add_control( esc_attr( $option['id'] ), array(
+                        'type'              => 'dropdown-pages',
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    ) );
+                break;
+
+                // Categories Field
+                case 'categories':
+                    $wp_customize->add_control( new Starter_Customize_Categories_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
+                // Textarea Field
+                case 'textarea':
+                    $wp_customize->add_control( new Starter_Customize_Textarea_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
+                // Menus Field
+                case 'menus':
+                    $wp_customize->add_control( new Starter_Customize_Menus_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
+                // Users Field
+                case 'users':
+                    $wp_customize->add_control( new Starter_Customize_Users_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
+                // Posts Field
+                case 'posts':
+                    $wp_customize->add_control( new Starter_Customize_Posts_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
+                // Post Types Field
+                case 'post_types':
+                    $wp_customize->add_control( new Starter_Customize_Post_Type_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
+                // Tags Field
+                case 'tags':
+                    $wp_customize->add_control( new Starter_Customize_Tags_Control( $wp_customize, esc_attr( $option['id'] ), array(
+                        'priority'          => $priority,
+                        'section'           => $section,
+                        'label'             => $title,
+                        'description'       => $description,
+                    )));
+                break;
+
                 // Image Upload Field
                 case 'image':
                     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, esc_attr( $option['id'] ), array(
@@ -227,88 +358,6 @@ function starter_customizer_register( $wp_customize ) {
                     )));
                 break;
 
-                // Pages Field
-                case 'pages':
-                    $wp_customize->add_control( esc_attr( $option['id'] ), array(
-                        'type'              => 'dropdown-pages',
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    ) );
-                break;
-
-                // Categories Field
-                case 'categories':
-                    $wp_customize->add_control( new starter_Customize_Categories_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-                // Textarea Field
-                case 'textarea':
-                    $wp_customize->add_control( new starter_Customize_Textarea_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-                // Menus Field
-                case 'menus':
-                    $wp_customize->add_control( new starter_Customize_Menus_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-                // Users Field
-                case 'users':
-                    $wp_customize->add_control( new starter_Customize_Users_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-                // Posts Field
-                case 'posts':
-                    $wp_customize->add_control( new starter_Customize_Posts_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-                // Post Types Field
-                case 'post_types':
-                    $wp_customize->add_control( new starter_Customize_Post_Type_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-                // Tags Field
-                case 'tags':
-                    $wp_customize->add_control( new starter_Customize_Tags_Control( $wp_customize, esc_attr( $option['id'] ), array(
-                        'priority'          => $priority,
-                        'section'           => $section,
-                        'label'             => $title,
-                        'description'       => $description,
-                    )));
-                break;
-
-
             }
 
 
@@ -318,14 +367,12 @@ function starter_customizer_register( $wp_customize ) {
     }
 
 }
-add_action( 'customize_register', 'starter_customizer_register' );
+add_action( 'customize_register', 'starter_cf_customizer_register' );
 
 
 /**
- * starter Customizer custom control classes
+ * Customizer custom control classes
  */
-
-
 if( ! class_exists( 'WP_Customize_Control' ) )
      return;
 
@@ -333,7 +380,7 @@ if( ! class_exists( 'WP_Customize_Control' ) )
 /**
  * Add Textarea control
  */
-class starter_Customize_Textarea_Control extends WP_Customize_Control {
+class Starter_Customize_Textarea_Control extends WP_Customize_Control {
     
     public $type = 'textarea';
 
@@ -358,7 +405,7 @@ class starter_Customize_Textarea_Control extends WP_Customize_Control {
 /**
  * Add Categories control
  */
-class starter_Customize_Categories_Control extends WP_Customize_Control {
+class Starter_Customize_Categories_Control extends WP_Customize_Control {
 
     public $type = 'categories';
  
@@ -393,7 +440,7 @@ class starter_Customize_Categories_Control extends WP_Customize_Control {
 /**
  * Add Menus control
  */
-class starter_Customize_Menus_Control extends WP_Customize_Control {
+class Starter_Customize_Menus_Control extends WP_Customize_Control {
 
     public $type = 'menus';
     private $menus = false;
@@ -438,7 +485,7 @@ class starter_Customize_Menus_Control extends WP_Customize_Control {
 /**
  * Add Users control
  */
-class starter_Customize_Users_Control extends WP_Customize_Control {
+class Starter_Customize_Users_Control extends WP_Customize_Control {
 
     public $type = 'users';
     private $users = false;
@@ -483,7 +530,7 @@ class starter_Customize_Users_Control extends WP_Customize_Control {
 /**
  * Add Posts control
  */
-class starter_Customize_Posts_Control extends WP_Customize_Control {
+class Starter_Customize_Posts_Control extends WP_Customize_Control {
 
     public $type = 'posts';
     private $posts = false;
@@ -527,7 +574,7 @@ class starter_Customize_Posts_Control extends WP_Customize_Control {
 /**
  * Add Post Types control
  */
-class starter_Customize_Post_Type_Control extends WP_Customize_Control {
+class Starter_Customize_Post_Type_Control extends WP_Customize_Control {
     
     public $type = 'post_types';
     private $post_types = false;
@@ -572,7 +619,7 @@ class starter_Customize_Post_Type_Control extends WP_Customize_Control {
 /**
  * Add Tags control
  */
-class starter_Customize_Tags_Control extends WP_Customize_Control {
+class Starter_Customize_Tags_Control extends WP_Customize_Control {
 
     public $type = 'tags';
     private $tags = false;

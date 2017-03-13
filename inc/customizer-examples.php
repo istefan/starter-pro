@@ -1,12 +1,44 @@
 <?php
 /**
- * Customizer Control Examples.
+ * Customizer Controls.
  *
- * @package Starter
+ * @package WPshed Customizer Framework
  */
 
+// User access level
+$capability = 'edit_theme_options';
+
+// Option type
+$type = 'theme_mod'; // option / theme_mod
+
 /* ---------------------------------------------------------------------------------------------------
-    Examples
+    Panels
+--------------------------------------------------------------------------------------------------- */
+
+// Panel
+$options[] = array( 'title'             => __( 'Theme Options', 'starter' ),
+                    'description'       => '',
+                    'id'                => 'starter_theme_options',
+                    'priority'          => 10,
+                    'theme_supports'    => '',
+                    'type'              => 'panel' );
+
+
+/* ---------------------------------------------------------------------------------------------------
+    Sections
+--------------------------------------------------------------------------------------------------- */
+
+// Section
+$options[] = array( 'title'             => __( 'Test Section', 'starter' ),
+                    'description'       => __( 'Section description', 'starter' ),
+                    'panel'             => 'starter_theme_options',
+                    'id'                => 'starter_section_id',
+                    'priority'          => 10,
+                    'theme_supports'    => '',
+                    'type'              => 'section' );
+
+/* ---------------------------------------------------------------------------------------------------
+    Controls
 --------------------------------------------------------------------------------------------------- */
 
 // Text
@@ -99,11 +131,10 @@ $options[] = array( 'title'             => __( 'File Upload Field', 'starter' ),
                     'sanitize_callback' => '',
                     'type'              => 'control' );
 
-
 // URL
 $options[] = array( 'title'             => __( 'URL Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_2',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_url',
                     'default'           => '',
                     'option'            => 'url',
@@ -113,7 +144,7 @@ $options[] = array( 'title'             => __( 'URL Field', 'starter' ),
 // Email
 $options[] = array( 'title'             => __( 'Email Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_2',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_email',
                     'default'           => '',
                     'option'            => 'email',
@@ -123,7 +154,7 @@ $options[] = array( 'title'             => __( 'Email Field', 'starter' ),
 // Password
 $options[] = array( 'title'             => __( 'Password Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_2',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_password',
                     'default'           => '',
                     'option'            => 'password',
@@ -133,7 +164,7 @@ $options[] = array( 'title'             => __( 'Password Field', 'starter' ),
 // number
 $options[] = array( 'title'             => __( 'number Field (px)', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_2',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_number',
                     'default'           => 70,
                     'option'            => 'number',
@@ -149,7 +180,7 @@ $options[] = array( 'title'             => __( 'number Field (px)', 'starter' ),
 // Pages
 $options[] = array( 'title'             => __( 'Pages Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_pages',
                     'default'           => 0,
                     'option'            => 'pages',
@@ -159,7 +190,7 @@ $options[] = array( 'title'             => __( 'Pages Field', 'starter' ),
 // Categories
 $options[] = array( 'title'             => __( 'Categories Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_categories',
                     'default'           => 0,
                     'option'            => 'categories',
@@ -169,7 +200,7 @@ $options[] = array( 'title'             => __( 'Categories Field', 'starter' ),
 // Tags
 $options[] = array( 'title'             => __( 'Tags Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_tags',
                     'default'           => '',
                     'option'            => 'tags',
@@ -179,7 +210,7 @@ $options[] = array( 'title'             => __( 'Tags Field', 'starter' ),
 // Post Types
 $options[] = array( 'title'             => __( 'Post Types Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_post_types',
                     'default'           => '',
                     'option'            => 'post_types',
@@ -189,7 +220,7 @@ $options[] = array( 'title'             => __( 'Post Types Field', 'starter' ),
 // Posts
 $options[] = array( 'title'             => __( 'Posts Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_posts',
                     'default'           => '',
                     'option'            => 'posts',
@@ -199,7 +230,7 @@ $options[] = array( 'title'             => __( 'Posts Field', 'starter' ),
 // Users
 $options[] = array( 'title'             => __( 'Users Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_users',
                     'default'           => '',
                     'option'            => 'users',
@@ -209,12 +240,9 @@ $options[] = array( 'title'             => __( 'Users Field', 'starter' ),
 // Menus
 $options[] = array( 'title'             => __( 'Menus Field', 'starter' ),
                     'description'       => '',
-                    'section'           => 'starter_section_3',
+                    'section'           => 'starter_section_id',
                     'id'                => 'starter_menus',
                     'default'           => '',
                     'option'            => 'menus',
                     'sanitize_callback' => '',
                     'type'              => 'control' );
-
-
-             
